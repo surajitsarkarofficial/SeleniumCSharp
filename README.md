@@ -4,30 +4,31 @@ Nuget manager is used to manage the packages.
 
 
 
-//Selenium 
-IWebDriver driver = new ChromeDriver();
-driver.Manage().Window.Maximize();
+//Selenium <br>
+IWebDriver driver = new ChromeDriver();<br>
+driver.Manage().Window.Maximize();<br><br>
 
-//Launch URL
-driver.Navigate().GoToUrl("url");
+//Launch URL<br>
+driver.Navigate().GoToUrl("url");<br><br>
 
-//Store Locator
-IWebElement element = By.Id("locator");
+//Store Locator<br>
+IWebElement element = By.Id("locator");<br><br>
 
-//Type
-driver.FindElement(element).SendKeys("Hello");
+//Type<br>
+driver.FindElement(element).SendKeys("Hello");<br><br>
 
-//Click
-driver.FindElement(element).Click();
+//Click<br>
+driver.FindElement(element).Click();<br><br>
 
-//Dropdown
-SelectElement dd = new SelectElement(driver.FindElement(By.Xpath("sdf")));
-dd.SelectByText("ABC");
-dd.SelectByValue("abc");
-dd.SelectByIndex(2);
-dd.SelectedOption.Text;
-dd.AllSelectedOptions
-dd.DeselectByText("ac");
-dd.DeselectByValue();
-dd.DeselectByIndex();
-dd.DeselectAll();
+//Dropdown<br>
+SelectElement dd = new SelectElement(driver.FindElement(By.Xpath("sdf")));<br>
+dd.SelectByText("ABC");<br>
+dd.SelectByValue("abc");<br>
+dd.SelectByIndex(2);<br>
+dd.SelectedOption.Text;<br>
+dd.AllSelectedOptions<br>
+dd.DeselectByText("ac");<br>
+dd.DeselectByValue();<br>
+dd.DeselectByIndex();<br>
+dd.DeselectAll();<br>
+<br>
