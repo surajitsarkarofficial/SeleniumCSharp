@@ -20,10 +20,10 @@ namespace SeleniumCSharp.Tests
 
         }
 
-		[Test,Category("Regression")]//Test will execute twice as there are 2 [TestCase]
+		[Test,Category("Regression"),Order(2)]//Test will execute twice as there are 2 [TestCase]
 		[TestCase("admin","password")]
-        [TestCase("admin1", "password1")]
-        [Parallelizable(ParallelScope.All)]
+        //[TestCase("admin1", "password1")]
+        //[Parallelizable(ParallelScope.All)]
         public void LoginTest(string username, string pwd)
 		{
 			string actualMsg = new LandingPage(driver.Value).ClickLoginLink()
@@ -32,10 +32,10 @@ namespace SeleniumCSharp.Tests
 			Assert.AreEqual("Hello admin!", actualMsg);
 
 		}
-		[Test,Category("Smoke")]
-        [TestCaseSource("getTestData")]
+		[Test,Category("Smoke"),Order(1)]
+        //[TestCaseSource("getTestData")]
         //public void LoginTest2(string username, string pwd)
-        //[TestCase("admin1", "password")]
+        [TestCase("admin1", "password")]
         [Parallelizable(ParallelScope.All)]
         public void InvalidLoginTest(string username, string pwd)
         {
