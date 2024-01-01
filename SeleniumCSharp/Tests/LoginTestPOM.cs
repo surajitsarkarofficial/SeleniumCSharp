@@ -20,7 +20,7 @@ namespace SeleniumCSharp.Tests
 
         }
 
-		[Test]//Test will execute twice as there are 2 [TestCase]
+		[Test,Category("Regression")]//Test will execute twice as there are 2 [TestCase]
 		[TestCase("admin","password")]
         [TestCase("admin1", "password1")]
         [Parallelizable(ParallelScope.All)]
@@ -32,7 +32,7 @@ namespace SeleniumCSharp.Tests
 			Assert.AreEqual("Hello admin!", actualMsg);
 
 		}
-		[Test]
+		[Test,Category("Smoke")]
         [TestCaseSource("getTestData")]
         //public void LoginTest2(string username, string pwd)
         //[TestCase("admin1", "password")]
