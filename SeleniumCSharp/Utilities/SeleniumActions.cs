@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 namespace SeleniumCSharp.Utilities
 {
@@ -22,6 +23,10 @@ namespace SeleniumCSharp.Utilities
 		public static string EAGetElementText(this IWebElement locator)
 		{
 			return locator.Text;
+		}
+		public static void WaitForElementToBeVissible(this By locator , IWebDriver driver, WebDriverWait wait)
+		{
+			wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(locator));
 		}
     }
 }
